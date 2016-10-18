@@ -1,9 +1,15 @@
 ﻿namespace Application
 {
-    class Program
+    static class Program
     {
-        public void Main( string[] args )
+        public static void Main( string[] args )
         {
+        }
+
+        // Preenche Class Variaveis
+        public static PreencheVariaveis()
+        {
+            
         }
     }
 }

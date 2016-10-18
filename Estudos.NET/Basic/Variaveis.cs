@@ -29,7 +29,7 @@ namespace Basic
             NumeroPreciso = numeroPreciso;
             Boleano = boleano;
             Texto = texto;
-            Console.WriteLine( $"Numero {Numero} Caracter {Caracter} Boleano {Boleano} Numero Preciso {NumeroPreciso} \nTexto {Texto}" );
+            Console.WriteLine( $"Variavel - Numero {Numero} Caracter {Caracter} Boleano {Boleano} Numero Preciso {NumeroPreciso} \nTexto {Texto}" );
         }
 
         // Metodos de preenchimento do Array
@@ -48,10 +48,32 @@ namespace Basic
                 ArrayNumero[i] = i;
                 ArrayBoleano[i] = i % 2 == 0;
                 ArrayNumeroPreciso[i] = Convert.ToDouble(2 / i);
-                ArrayTexto[i] = $"Numero {ArrayNumero[i]} - Boelano {ArrayBoleano[i]} Double {ArrayNumeroPreciso[i]}";
-                ArrayCaracter[i] = Convert.ToChar(ArrayTexto[i].Substring(i));
+                ArrayTexto[i] = $"Array - Numero {ArrayNumero[i]} - Boelano {ArrayBoleano[i]} Double {ArrayNumeroPreciso[i]}";
+                ArrayCaracter[i] = ArrayTexto[i][i];
 
-                Console.WriteLine( $"Numero {ArrayNumero[i]} Double {ArrayNumeroPreciso} Carracter {ArrayCaracter} Boleano {ArrayBoleano[i]} Texto {ArrayTexto[i]}");
+                Console.WriteLine( $"Numero {ArrayNumero[i]} Double {ArrayNumeroPreciso[i]} Carracter {ArrayCaracter[i]} Boleano {ArrayBoleano[i]} Texto {ArrayTexto[i]}");
+            }
+        }
+
+        // Metodo Preenchimento de List
+        public void PreencheLista()
+        {
+            int maximo = 20;
+            ListNumero = new List<int>();
+            ListCaracter = new List<char>();
+            ListBoleano = new List<bool>();
+            ListNumeroPreciso = new List<double>(2);
+            ListTexto = new List<string>();
+
+            for (int i = 10; i < maximo; i++)
+            {
+                ListNumero.Add(i);
+                ListNumeroPreciso.Add(Convert.ToDouble( i / 2));
+                ListBoleano.Add(i % 2 ==0);
+                ListTexto.Add($"Array - Numero {ListNumero[i]} - Boelano {ListBoleano[i]} Double {ListNumeroPreciso[i]}");
+                ListCaracter.Add(ListTexto[i][i]);
+
+                Console.WriteLine( $"Numero {ListNumero[i]} Double {ListNumeroPreciso[i]} Carracter {ListCaracter[i]} Boleano {ListBoleano[i]} Texto {ListTexto[i]}" );
             }
         }
 
