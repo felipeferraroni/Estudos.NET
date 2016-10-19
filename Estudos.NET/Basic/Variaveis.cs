@@ -8,7 +8,10 @@ namespace Basic
     {
         public Variaveis()
         {
-
+            Maximo = 10;
+            PreencheVariaveis();
+            PreencheArray();
+            PreencheLista();
         }
 
         // Metodos de preenchimento de Variaveis
@@ -19,7 +22,6 @@ namespace Basic
             NumeroPreciso = 4.50;
             Boleano = true;
             Texto = "Tipo Texto";
-            Console.WriteLine( $"Numero {Numero} Caracter {Caracter} Boleano {Boleano} Numero Preciso {NumeroPreciso} \nTexto {Texto}" );
         }
 
         public void PreencheVariaveis(int numero, char caracter, double numeroPreciso, bool boleano, string texto)
@@ -29,54 +31,48 @@ namespace Basic
             NumeroPreciso = numeroPreciso;
             Boleano = boleano;
             Texto = texto;
-            Console.WriteLine( $"Variavel - Numero {Numero} Caracter {Caracter} Boleano {Boleano} Numero Preciso {NumeroPreciso} \nTexto {Texto}" );
         }
 
         // Metodos de preenchimento do Array
         public void PreencheArray()
         {
-            int maximo = 10;
+            ArrayNumero = new int[Maximo];
+            ArrayCaracter = new char[Maximo];
+            ArrayBoleano = new bool[Maximo];
+            ArrayNumeroPreciso = new double[Maximo];
+            ArrayTexto = new string[Maximo];
 
-            ArrayNumero = new int[maximo];
-            ArrayCaracter = new char[maximo];
-            ArrayBoleano = new bool[maximo];
-            ArrayNumeroPreciso = new double[maximo];
-            ArrayTexto = new string[maximo];
-
-            for (int i = 0; i < maximo; i++)
+            for (int i = 0; i < Maximo; i++)
             {
                 ArrayNumero[i] = i;
                 ArrayBoleano[i] = i % 2 == 0;
-                ArrayNumeroPreciso[i] = Convert.ToDouble(2 / i);
+                ArrayNumeroPreciso[i] = (double)i / 2;
                 ArrayTexto[i] = $"Array - Numero {ArrayNumero[i]} - Boelano {ArrayBoleano[i]} Double {ArrayNumeroPreciso[i]}";
                 ArrayCaracter[i] = ArrayTexto[i][i];
-
-                Console.WriteLine( $"Numero {ArrayNumero[i]} Double {ArrayNumeroPreciso[i]} Carracter {ArrayCaracter[i]} Boleano {ArrayBoleano[i]} Texto {ArrayTexto[i]}");
             }
         }
 
         // Metodo Preenchimento de List
         public void PreencheLista()
         {
-            int maximo = 20;
             ListNumero = new List<int>();
             ListCaracter = new List<char>();
             ListBoleano = new List<bool>();
             ListNumeroPreciso = new List<double>(2);
             ListTexto = new List<string>();
 
-            for (int i = 10; i < maximo; i++)
+            for (int i = 0; i < Maximo; i++)
             {
                 ListNumero.Add(i);
-                ListNumeroPreciso.Add(Convert.ToDouble( i / 2));
+                ListNumeroPreciso.Add( (double) i / 2);
                 ListBoleano.Add(i % 2 ==0);
-                ListTexto.Add($"Array - Numero {ListNumero[i]} - Boelano {ListBoleano[i]} Double {ListNumeroPreciso[i]}");
+                ListTexto.Add($"List - Numero {ListNumero[i]} - Boelano {ListBoleano[i]} Double {ListNumeroPreciso[i]}");
                 ListCaracter.Add(ListTexto[i][i]);
-
-                Console.WriteLine( $"Numero {ListNumero[i]} Double {ListNumeroPreciso[i]} Carracter {ListCaracter[i]} Boleano {ListBoleano[i]} Texto {ListTexto[i]}" );
             }
         }
 
+        // Apenas para limitar
+        public int Maximo { get; set; }
         // Variaves
         public int Numero { get; set; }
         public string Texto { get; set; }
