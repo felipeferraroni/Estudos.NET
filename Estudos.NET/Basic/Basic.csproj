@@ -30,12 +30,45 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Base\FrmBaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FrmBaseView.Designer.cs">
+      <DependentUpon>FrmBaseView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCalculadoraDinamica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCalculadoraDinamica.Designer.cs">
+      <DependentUpon>FrmCalculadoraDinamica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmCarregaImagens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCarregaImagens.Designer.cs">
+      <DependentUpon>FrmCarregaImagens.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioDosTempos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Variaveis.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\FrmBaseView.resx">
+      <DependentUpon>FrmBaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmCalculadoraDinamica.resx">
+      <DependentUpon>FrmCalculadoraDinamica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmCarregaImagens.resx">
+      <DependentUpon>FrmCarregaImagens.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Diagnostics.PerformanceData;
 using Basic;
+using Basic.Views;
 
 namespace Application
 {
@@ -8,18 +8,20 @@ namespace Application
     {
         static Variaveis variaveis = new Variaveis();
         static InicioDosTempos inicioDosTempos = new InicioDosTempos();
-        public static void Main( string[] args )
+
+        [STAThread]
+        public static void Main(string[] args)
         {
-            ExibeCalculos();
-            Console.ReadKey();
+            CalculadoraDinamica();
         }
 
         // Preenche Class Variaveis
         public static void ExibeVariaveis()
         {
-            for ( int i = 0; i < variaveis.Maximo; i++ )
+            for (int i = 0; i < variaveis.Maximo; i++)
             {
-                Console.WriteLine( $"Lista - {variaveis.ListNumero[i]} - {variaveis.ListBoleano[i]} - {variaveis.ListCaracter[i]} - {variaveis.ListNumeroPreciso[i]}" );
+                Console.WriteLine(
+                    $"Lista - {variaveis.ListNumero[i]} - {variaveis.ListBoleano[i]} - {variaveis.ListCaracter[i]} - {variaveis.ListNumeroPreciso[i]}");
             }
         }
 
@@ -41,6 +43,22 @@ namespace Application
         public static void ExibeCalculos()
         {
             inicioDosTempos.Calculos();
+        }
+
+        public static void CarregaImagens()
+        {
+            using (var frmCarregaImagens = new FrmCarregaImagens())
+            {
+                frmCarregaImagens.ShowDialog();
+            }
+        }
+
+        public static void CalculadoraDinamica()
+        {
+            using (var frmCalculadoraDinamica = new FrmCalculadoraDinamica())
+            {
+                frmCalculadoraDinamica.ShowDialog();
+            }
         }
     }
 }
