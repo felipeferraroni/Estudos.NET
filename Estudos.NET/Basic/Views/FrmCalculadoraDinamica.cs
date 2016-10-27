@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 using Basic.Base;
 
@@ -6,7 +7,7 @@ namespace Basic.Views
 {
     public sealed partial class FrmCalculadoraDinamica : FrmBaseView
     {
-        private double total, ultimomero;
+        private double total, primeiroNumero ,ultimoNumero;
         private string operador;
 
         public FrmCalculadoraDinamica()
@@ -16,13 +17,70 @@ namespace Basic.Views
             Configuration();
         }
 
+        public void Calculator(object sender, EventArgs e)
+        {
+            ultimoNumero = Convert.ToDouble(textBox1.Text.Replace($"{primeiroNumero}{operador}", ""));
+            #region Swtch
+
+            switch (operador)
+            {
+                case "+":
+                    total = primeiroNumero + ultimoNumero;
+                    break;
+                case "-":
+                    total = primeiroNumero - ultimoNumero;
+                    break;
+                case "*":
+                    total = primeiroNumero * ultimoNumero;
+                    break;
+                case "/":
+                    total = primeiroNumero / ultimoNumero;
+                    break;
+            }
+            #endregion
+
+            textBox1.Text = $"{total}";
+
+            AlterButton(false);
+        }
+
+        public void AlterButton(bool enable)
+        {
+            button0.Enabled = enable;
+            button1.Enabled = enable;
+            button2.Enabled = enable;
+            button3.Enabled = enable;
+            button4.Enabled = enable;
+            button5.Enabled = enable;
+            button6.Enabled = enable;
+            button9.Enabled = enable;
+            button8.Enabled = enable;
+            button7.Enabled = enable;
+            button10.Enabled = enable;
+            button11.Enabled = enable;
+            button12.Enabled = enable;
+            button13.Enabled = enable;
+            button14.Enabled = enable;
+        }
+
+        public void Operacao(object sender, EventArgs e)
+        {
+            primeiroNumero = Convert.ToDouble(textBox1.Text);
+            var button = sender as Button;
+            if (button != null)
+            {
+                operador = button.Text;
+                textBox1.Text += operador;
+            }
+        }
+
         public void CaptureButton(object sender, EventArgs e)
         {
             var button = sender as Button;
             if (button != null)
-                if (textBox1.Text.IndexOf(",", StringComparison.Ordinal) > 0)
+                if (textBox1.Text.Contains(","))
                 {
-                    textBox1.Text += button.Text.IndexOf(",", StringComparison.Ordinal) > 0 ? string.Empty: button.Text;
+                    textBox1.Text += button.Text.Contains(",") ? string.Empty: button.Text;
                 }
                 else
                 {
@@ -54,7 +112,6 @@ namespace Basic.Views
             button13.Text = "/";
             button14.Text = "=";
             button15.Text = "Limpar";
-            button16.Text = ",";
             Clear();
 
         }
@@ -62,9 +119,11 @@ namespace Basic.Views
         public void Clear()
         {
             total = 0.0;
-            ultimomero = 0.0;
-            operador = "+";
+            ultimoNumero = 0.0;
+            primeiroNumero = 0.0;
+            operador = String.Empty;
             textBox1.Text = String.Empty;
+            AlterButton(true);
         }
 
     }
