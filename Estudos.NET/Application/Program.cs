@@ -12,7 +12,8 @@ namespace Application
         [STAThread]
         public static void Main(string[] args)
         {
-            CalculadoraDinamica();
+            FrmProgressBar progressBar = new FrmProgressBar();
+            progressBar.ShowDialog();
         }
 
         // Preenche Class Variaveis
