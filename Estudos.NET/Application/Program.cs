@@ -1,5 +1,6 @@
 ﻿using System;
 using Basic;
+using Basic.TrabalhandoArquivos;
 using Basic.Views;
 
 namespace Application
@@ -12,8 +13,9 @@ namespace Application
         [STAThread]
         public static void Main(string[] args)
         {
-            FrmProgressBar progressBar = new FrmProgressBar();
-            progressBar.ShowDialog();
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            TrabalhandoArquivos();
         }
 
         // Preenche Class Variaveis
@@ -60,6 +62,24 @@ namespace Application
             {
                 frmCalculadoraDinamica.ShowDialog();
             }
+        }
+
+        public static void ExibeProgressBar()
+        {
+            FrmProgressBar progressBar = new FrmProgressBar();
+            progressBar.ShowDialog();
+        }
+
+        public static void ExibeLogin()
+        {
+            var frmLogin = new FrmLogin();
+            frmLogin.ShowDialog();
+        }
+
+        public static void TrabalhandoArquivos()
+        {
+            FrmTralhandoArquivosTexto frmTralhando = new FrmTralhandoArquivosTexto();
+            frmTralhando.ShowDialog();
         }
     }
 }
