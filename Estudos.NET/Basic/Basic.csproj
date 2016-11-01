@@ -37,6 +37,13 @@
       <DependentUpon>FrmBaseView.cs</DependentUpon>
     </Compile>
     <Compile Include="TrabalhandoArquivos\TrabalhandoArquivosTexto.cs" />
+    <Compile Include="TrabalhandoArquivos\TrabalhandoDiretorios.cs" />
+    <Compile Include="Views\FrmCaixadeTexto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmCaixadeTexto.Designer.cs">
+      <DependentUpon>FrmCaixadeTexto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmCalculadoraDinamica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +88,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Base\FrmBaseView.resx">
       <DependentUpon>FrmBaseView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmCaixadeTexto.resx">
+      <DependentUpon>FrmCaixadeTexto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmCalculadoraDinamica.resx">
       <DependentUpon>FrmCalculadoraDinamica.cs</DependentUpon>

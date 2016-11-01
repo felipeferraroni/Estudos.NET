@@ -23,12 +23,8 @@ namespace Basic.TrabalhandoArquivos
             using (StreamReader ler = new StreamReader("ArquivoDeTexto.txt"))
             {
                 string lido = string.Empty, lendo = string.Empty;
-                while ((lendo = ler.ReadLine()) != null)
-                {
-                    lido += lendo;
-                }
 
-                return lido;
+                return ler.ReadToEnd();
             }
         }
 

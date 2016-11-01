@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Basic;
 using Basic.TrabalhandoArquivos;
 using Basic.Views;
@@ -15,7 +16,7 @@ namespace Application
         {
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            TrabalhandoArquivos();
+            TrabalhandoDiretorio();
         }
 
         // Preenche Class Variaveis
@@ -76,10 +77,17 @@ namespace Application
             frmLogin.ShowDialog();
         }
 
-        public static void TrabalhandoArquivos()
+        public static void TrabalhandoArquivo()
         {
             FrmTralhandoArquivosTexto frmTralhando = new FrmTralhandoArquivosTexto();
             frmTralhando.ShowDialog();
+        }
+
+        public static void TrabalhandoDiretorio()
+        {
+            TrabalhandoDiretorios  Direct = new TrabalhandoDiretorios();
+
+            Direct.DiretorioWindows();
         }
     }
 }
