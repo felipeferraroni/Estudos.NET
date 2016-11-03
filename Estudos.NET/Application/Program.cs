@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using Basic;
-using Basic.TrabalhandoArquivos;
+using Basic.TrabalhandoDiretorioArquivos;
 using Basic.Views;
 
 namespace Application
@@ -16,7 +16,8 @@ namespace Application
         {
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            TrabalhandoDiretorio();
+            var diretorio = new FrmTranbalhandoXml();
+            diretorio.ShowDialog();
         }
 
         // Preenche Class Variaveis
@@ -87,7 +88,7 @@ namespace Application
         {
             TrabalhandoDiretorios  Direct = new TrabalhandoDiretorios();
 
-            Direct.DiretorioWindows();
+            Direct.DiretorioWindows("");
         }
     }
 }

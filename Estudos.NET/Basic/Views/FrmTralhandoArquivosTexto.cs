@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Runtime.Remoting.Channels;
 using Basic.Base;
-using Basic.TrabalhandoArquivos;
+using Basic.TrabalhandoDiretorioArquivos;
 
 namespace Basic.Views
 {
-    public sealed partial class FrmTralhandoArquivosTexto : FrmBaseView
+    public partial class FrmTralhandoArquivosTexto : FrmBaseView
     {
         private TrabalhandoArquivosTexto _arquivos;
         public FrmTralhandoArquivosTexto()

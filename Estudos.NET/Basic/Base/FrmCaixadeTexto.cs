@@ -1,6 +1,4 @@
-﻿using Basic.Base;
-
-namespace Basic.Views
+﻿namespace Basic.Base
 {
     public partial class FrmCaixadeTexto : FrmBaseView
     {

@@ -36,12 +36,13 @@
     <Compile Include="Base\FrmBaseView.Designer.cs">
       <DependentUpon>FrmBaseView.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrabalhandoArquivos\TrabalhandoArquivosTexto.cs" />
-    <Compile Include="TrabalhandoArquivos\TrabalhandoDiretorios.cs" />
-    <Compile Include="Views\FrmCaixadeTexto.cs">
+    <Compile Include="TrabalhandoDiretorioArquivos\TrabalhandoArquivosTexto.cs" />
+    <Compile Include="TrabalhandoDiretorioArquivos\TrabalhandoArquivosXml.cs" />
+    <Compile Include="TrabalhandoDiretorioArquivos\TrabalhandoDiretorios.cs" />
+    <Compile Include="Base\FrmCaixadeTexto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FrmCaixadeTexto.Designer.cs">
+    <Compile Include="Base\FrmCaixadeTexto.Designer.cs">
       <DependentUpon>FrmCaixadeTexto.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FrmCalculadoraDinamica.cs">
@@ -59,6 +60,12 @@
     <Compile Include="InicioDosTempos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Variaveis.cs" />
+    <Compile Include="Views\FrmDiretorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmDiretorio.Designer.cs">
+      <DependentUpon>FrmDiretorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +84,12 @@
     <Compile Include="Views\FrmTralhandoArquivosTexto.Designer.cs">
       <DependentUpon>FrmTralhandoArquivosTexto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FrmTranbalhandoXml.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmTranbalhandoXml.Designer.cs">
+      <DependentUpon>FrmTranbalhandoXml.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -89,7 +102,7 @@
     <EmbeddedResource Include="Base\FrmBaseView.resx">
       <DependentUpon>FrmBaseView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FrmCaixadeTexto.resx">
+    <EmbeddedResource Include="Base\FrmCaixadeTexto.resx">
       <DependentUpon>FrmCaixadeTexto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmCalculadoraDinamica.resx">
@@ -97,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmCarregaImagens.resx">
       <DependentUpon>FrmCarregaImagens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmDiretorio.resx">
+      <DependentUpon>FrmDiretorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -107,7 +123,11 @@
     <EmbeddedResource Include="Views\FrmTralhandoArquivosTexto.resx">
       <DependentUpon>FrmTralhandoArquivosTexto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmTranbalhandoXml.resx">
+      <DependentUpon>FrmTranbalhandoXml.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

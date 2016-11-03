@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace Basic.TrabalhandoArquivos
+namespace Basic.TrabalhandoDiretorioArquivos
 {
     public class TrabalhandoArquivosTexto
     {
