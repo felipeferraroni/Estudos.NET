@@ -16,8 +16,7 @@ namespace Application
         {
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            var diretorio = new FrmTranbalhandoXml();
-            diretorio.ShowDialog();
+            LerXml();
         }
 
         // Preenche Class Variaveis
@@ -89,6 +88,18 @@ namespace Application
             TrabalhandoDiretorios  Direct = new TrabalhandoDiretorios();
 
             Direct.DiretorioWindows("");
+        }
+
+        public static void LerXml()
+        {
+            var frm = new FrmLendoXml();
+            frm.ShowDialog();
+        }
+
+        public static void TrabalhandoXml()
+        {
+            var frm = new FrmTranbalhandoXml();
+            frm.ShowDialog();
         }
     }
 }

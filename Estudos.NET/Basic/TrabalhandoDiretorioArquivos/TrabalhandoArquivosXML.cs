@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
@@ -109,6 +111,52 @@ namespace Basic.TrabalhandoDiretorioArquivos
             DataSet ds = new DataSet();
             ds.ReadXml(arquivo);
             return ds.Tables[0].DefaultView;
+        }
+
+        public ArrayList LerArquivoXml(string arquivo)
+        {
+            ArrayList elementos = new ArrayList();
+
+            XmlTextReader xml = new XmlTextReader(arquivo);
+
+            while (xml.Read())
+            {
+                switch (xml.NodeType)
+                {
+                    case XmlNodeType.Element:
+                        if (xml.HasAttributes)
+                        {
+                            while (xml.MoveToNextAttribute())
+                            {
+                                elementos.Add(xml.Value);
+                            }
+                        }
+                        break;
+                    case XmlNodeType.Text:
+                        elementos.Add(xml.Value);
+                        break;
+                }
+            }
+
+            return elementos;
+        }
+
+        public List<string> LerArquivoXmlEspecifico(string arquivo)
+        {
+            List<string> listString = new List<string>();
+
+            //Cria uma instância de um documento XML
+            XmlDocument oXML = new XmlDocument();
+
+            //carrega o arquivo XML
+            oXML.Load(arquivo);
+
+            //Lê o filho de um Nó Pai específico
+            listString.Add(oXML.SelectSingleNode("Alunos").ChildNodes[0].InnerText);
+            listString.Add(oXML.SelectSingleNode("Alunos").ChildNodes[1].InnerText);
+            listString.Add(oXML.SelectSingleNode("Alunos").ChildNodes[2].InnerText);
+
+            return listString;
         }
     }
 }
