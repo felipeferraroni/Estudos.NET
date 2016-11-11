@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Globalization;
-using Basic;
+using Basic.Inicio;
 using Basic.TrabalhandoDiretorioArquivos;
+using Basic.Validacao;
 using Basic.Views;
 
 namespace Application
@@ -16,7 +16,7 @@ namespace Application
         {
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            LerXml();
+            Console.WriteLine( Validacao.validCpf("370.187.458-10"));
         }
 
         // Preenche Class Variaveis

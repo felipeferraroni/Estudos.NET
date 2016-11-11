@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Basic
+namespace Basic.Inicio
 {
     public  class InicioDosTempos
     {

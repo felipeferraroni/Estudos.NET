@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 
-namespace Basic
+namespace Basic.Inicio
 {
     public class Variaveis
     {
