@@ -1,8 +1,9 @@
 ﻿using System;
+using Basic.Functions;
 using Basic.Inicio;
 using Basic.TrabalhandoDiretorioArquivos;
-using Basic.Validacao;
 using Basic.Views;
+using Basic.Views.DDL;
 
 namespace Application
 {
@@ -16,7 +17,7 @@ namespace Application
         {
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            Console.WriteLine( Validacao.validCpf("370.187.458-10"));
+            ExibeTelaCreateTable();
         }
 
         // Preenche Class Variaveis
@@ -99,6 +100,12 @@ namespace Application
         public static void TrabalhandoXml()
         {
             var frm = new FrmTranbalhandoXml();
+            frm.ShowDialog();
+        }
+
+        public static void ExibeTelaCreateTable()
+        {
+            var frm = new FrmDDLTable();
             frm.ShowDialog();
         }
     }
