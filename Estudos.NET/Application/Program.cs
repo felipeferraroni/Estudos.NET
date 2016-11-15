@@ -1,9 +1,9 @@
 ﻿using System;
-using Basic.Functions;
 using Basic.Inicio;
 using Basic.TrabalhandoDiretorioArquivos;
 using Basic.Views;
 using Basic.Views.DDL;
+using Basic.Views.DML;
 
 namespace Application
 {
@@ -17,7 +17,7 @@ namespace Application
         {
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            ExibeTelaCreateTable();
+            ExibeDML();
         }
 
         // Preenche Class Variaveis
@@ -103,9 +103,15 @@ namespace Application
             frm.ShowDialog();
         }
 
-        public static void ExibeTelaCreateTable()
+        public static void ExibeDDL()
         {
             var frm = new FrmDDLTable();
+            frm.ShowDialog();
+        }
+
+        public static void ExibeDML()
+        {
+            var frm = new FrmDMLTable();
             frm.ShowDialog();
         }
     }

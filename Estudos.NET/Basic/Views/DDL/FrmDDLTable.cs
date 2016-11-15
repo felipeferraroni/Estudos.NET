@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using Basic.Base;
+﻿using Basic.Base;
 using Basic.DataBase.DDL;
 
 namespace Basic.Views.DDL

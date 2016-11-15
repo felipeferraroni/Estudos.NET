@@ -52,6 +52,7 @@
       <DependentUpon>FrmBaseView.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase\DDL\BasicDDL.cs" />
+    <Compile Include="DataBase\DML\BasicDML.cs" />
     <Compile Include="TrabalhandoDiretorioArquivos\TrabalhandoArquivosTexto.cs" />
     <Compile Include="TrabalhandoDiretorioArquivos\TrabalhandoArquivosXml.cs" />
     <Compile Include="TrabalhandoDiretorioArquivos\TrabalhandoDiretorios.cs" />
@@ -67,6 +68,21 @@
     </Compile>
     <Compile Include="Views\DDL\FrmDDLTable.Designer.cs">
       <DependentUpon>FrmDDLTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DML\FrmDMLContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DML\FrmDMLContato.Designer.cs">
+      <DependentUpon>FrmDMLContato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DML\FrmDMLTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DML\FrmDMLTable.Designer.cs">
+      <DependentUpon>FrmDMLTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DML\FrmDMLTelefone.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FrmCalculadoraDinamica.cs">
       <SubType>Form</SubType>
@@ -143,6 +159,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DDL\FrmDDLTable.resx">
       <DependentUpon>FrmDDLTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DML\FrmDMLContato.resx">
+      <DependentUpon>FrmDMLContato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DML\FrmDMLTable.resx">
+      <DependentUpon>FrmDMLTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DML\FrmDMLTelefone.resx">
+      <DependentUpon>FrmDMLTelefone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmCalculadoraDinamica.resx">
       <DependentUpon>FrmCalculadoraDinamica.cs</DependentUpon>
